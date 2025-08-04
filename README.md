@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Formalab - Diseño Paramétrico Visual
 
-## Getting Started
+Formalab es una plataforma visual para experimentar con diseño paramétrico y generativo. Está diseñada para creativos, diseñadores y arquitectos que quieren explorar formas, colores y transformaciones sin necesidad de programar.
 
-First, run the development server:
+## 🎨 Características
 
+- **Panel de Controles Intuitivo**: Sliders, selectores de color, toggles y selectores para ajustar parámetros en tiempo real
+- **5 Tipos de Patrones**: Geométrico, Orgánico, Fractal, Ondas y Cuadrícula
+- **Animación en Tiempo Real**: Activa animaciones y ajusta la velocidad
+- **Interfaz Responsiva**: Diseño moderno con soporte para modo oscuro
+- **Exportación**: (Próximamente) Exporta tus diseños en diferentes formatos
+
+## 🚀 Tecnologías
+
+- **Next.js 15** con App Router
+- **React 19** con TypeScript
+- **Tailwind CSS 4** para estilos
+- **Canvas API** para renderizado de patrones
+
+## 📦 Instalación
+
+1. Clona el repositorio:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd formalab-ai
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Ejecuta el servidor de desarrollo:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-## Learn More
+## 🎛️ Controles Disponibles
 
-To learn more about Next.js, take a look at the following resources:
+### Patrón
+- **Tipo de patrón**: Selecciona entre Geométrico, Orgánico, Fractal, Ondas o Cuadrícula
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Forma
+- **Tamaño**: Ajusta el tamaño de los elementos (10-100)
+- **Rotación**: Rota los elementos (0-360°)
+- **Escala**: Escala los elementos (0.1-3x)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Color
+- **Color primario**: Color principal de los elementos
+- **Color secundario**: Color alternativo para variación
+- **Color de fondo**: Color del fondo del canvas
 
-## Deploy on Vercel
+### Propiedades
+- **Densidad**: Controla la cantidad de elementos (5-100)
+- **Complejidad**: Ajusta la complejidad del patrón (1-10)
+- **Simetría**: Activa/desactiva la simetría
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Animación
+- **Animación**: Activa/desactiva la animación
+- **Velocidad**: Controla la velocidad de la animación (0.1-5x)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🏗️ Estructura del Proyecto
+
+```
+src/
+├── app/                    # App Router de Next.js
+│   ├── layout.tsx         # Layout principal
+│   ├── page.tsx           # Página principal
+│   └── globals.css        # Estilos globales
+├── components/            # Componentes React
+│   ├── controls/          # Componentes de control
+│   │   ├── Slider.tsx     # Control deslizante
+│   │   ├── ColorPicker.tsx # Selector de color
+│   │   ├── Toggle.tsx     # Interruptor
+│   │   ├── Select.tsx     # Selector
+│   │   └── ControlPanel.tsx # Panel principal de controles
+│   ├── canvas/            # Componentes de visualización
+│   │   └── GenerativeCanvas.tsx # Canvas principal
+│   ├── ui/                # Componentes de interfaz
+│   │   ├── Button.tsx     # Botón reutilizable
+│   │   └── Header.tsx     # Encabezado
+│   └── FormalabApp.tsx    # Componente principal
+└── lib/                   # Utilidades y tipos
+    └── types.ts           # Definiciones de tipos TypeScript
+```
+
+## 🎯 Próximas Características
+
+- [ ] Exportación a PNG, SVG, PDF
+- [ ] Guardado y carga de proyectos
+- [ ] Más tipos de patrones
+- [ ] Efectos de filtro y post-procesamiento
+- [ ] Biblioteca de presets
+- [ ] Modo colaborativo
+- [ ] Integración con APIs de IA
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas! Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📄 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 🙏 Agradecimientos
+
+- Inspirado en herramientas como Processing, p5.js y Grasshopper
+- Diseñado para la comunidad creativa y de diseño
+- Construido con tecnologías modernas de la web
